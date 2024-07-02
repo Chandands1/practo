@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Booking Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Doctor Booking Application</h1>
+
+<section id="create-appointment">
+    <h2>Create Appointment</h2>
+    <form id="createForm">
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" name="patientName" required>
+        <label for="doctorName">Doctor Name:</label>
+        <input type="text" id="doctorName" name="doctorName" required>
+        <label for="appointmentTime">Appointment Time:</label>
+        <input type="datetime-local" id="appointmentTime" name="appointmentTime" required>
+        <button type="submit">Create Appointment</button>
+    </form>
+</section>
+
+<section id="search-appointments">
+    <h2>Search Appointments</h2>
+    <form id="searchForm">
+        <label for="searchPatientName">Patient Name:</label>
+        <input type="text" id="searchPatientName" name="patientName">
+        <button type="submit">Search</button>
+    </form>
+</section>
+
+<section id="appointments-list">
+    <h2>Appointments</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Patient Name</th>
+            <th>Doctor Name</th>
+            <th>Appointment Time</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody id="appointmentsTable">
+        <!-- Appointments will be dynamically inserted here -->
+        </tbody>
+    </table>
+</section>
+
+<script src="scripts.js"></script>
+</body>
+</html>
